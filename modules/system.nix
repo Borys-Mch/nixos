@@ -9,7 +9,9 @@
 
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.kernelParams = [ "nvidia-drm.modeset=1" ];
+  boot.kernelParams = [ "quiet" "splash" "nvidia-drm.modeset=1" ];
+  boot.initrd.kernelModules = [ "nvidia" ];
+  boot.initrd.systemd.enable = true;
 
   boot.plymouth = {
     enable = true;
