@@ -66,8 +66,8 @@
     inkscape
 
     # 3D / slicer
-    pkgs.orca-slicer
-    LycheeSlicer
+    orca-slicer
+    lycheeslicer
     bambu-studio
 
     #Система
