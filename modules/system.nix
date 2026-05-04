@@ -9,29 +9,7 @@
 
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.kernelParams = [ 
-    "quiet" 
-    "splash" 
-    "i915.modeset=1" 
-  ];
-  boot.initrd.kernelModules = [ "nvidia" ];
-  boot.initrd.systemd.enable = true;
-
-  boot.plymouth = {
-    enable = true;
-    theme = "eye";
-    themePackages = [
-      (pkgs.stdenv.mkDerivation {
-        name = "eye-plymouth-theme";
-        src = ../plymouth-theme;
-
-        installPhase = ''
-          mkdir -p $out/share/plymouth/themes/eye
-          cp -r * $out/share/plymouth/themes/eye/
-        '';
-      })
-    ];
-  };
+  boot.kernelParams = [ "nvidia-drm.modeset=1" ];
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
