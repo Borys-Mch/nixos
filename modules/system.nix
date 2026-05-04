@@ -12,8 +12,7 @@
   boot.kernelParams = [ 
     "quiet" 
     "splash" 
-    "nvidia-drm.modeset=1" 
-    "video=eDP-1:1920x1080@60" 
+    "i915.modeset=1" 
   ];
   boot.initrd.kernelModules = [ "nvidia" ];
   boot.initrd.systemd.enable = true;
