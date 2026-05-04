@@ -9,7 +9,12 @@
 
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.kernelParams = [ "quiet" "splash" "nvidia-drm.modeset=1" ];
+  boot.kernelParams = [ 
+    "quiet" 
+    "splash" 
+    "nvidia-drm.modeset=1" 
+    "video=eDP-1:1920x1080@60" 
+  ];
   boot.initrd.kernelModules = [ "nvidia" ];
   boot.initrd.systemd.enable = true;
 
