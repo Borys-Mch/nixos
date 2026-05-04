@@ -17,7 +17,7 @@
     themePackages = [
       (pkgs.stdenv.mkDerivation {
         name = "eye-plymouth-theme";
-        src = ./plymouth-theme;
+        src = ../plymouth-theme;
 
         installPhase = ''
           mkdir -p $out/share/plymouth/themes/eye
