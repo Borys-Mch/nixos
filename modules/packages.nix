@@ -46,6 +46,7 @@
     mongodb-compass
     rpi-imager
     postman
+    esphome
 
     # Медіа
     smplayer
