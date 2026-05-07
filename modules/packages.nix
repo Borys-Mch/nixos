@@ -14,6 +14,7 @@
 
     # Internet
     brave
+    vivaldi
     filezilla
     anydesk
     thunderbird
@@ -47,6 +48,7 @@
     rpi-imager
     postman
     esphome
+    winboat
 
     # Медіа
     smplayer
