@@ -2,14 +2,38 @@
 
 {
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.systemd-boot.configurationLimit = 10;
-  boot.loader.timeout = 1;
+  boot = {
 
-  # Use latest kernel.
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.kernelParams = [ "nvidia-drm.modeset=1" ];
+    plymouth = {
+      enable = true;
+      theme = "rings";
+      themePackages = with pkgs; [
+        # By default we would install all themes
+        (adi1090x-plymouth-themes.override {
+          selected_themes = [ "rings" ];
+        })
+      ];
+    };
+
+    # Enable "Silent boot"
+    consoleLogLevel = 3;
+    initrd.verbose = false;
+    kernelPackages = pkgs.linuxPackages_latest;
+    kernelParams = [
+      "quiet"
+      "udev.log_level=3"
+      "systemd.show_status=auto"
+      "nvidia-drm.modeset=1"
+    ];
+    
+    loader = {
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+      systemd-boot.configurationLimit = 10;
+      timeout = 1;
+    }
+
+  };
 
   networking.hostName = "Borys-Mch-Nix"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
