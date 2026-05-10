@@ -9,7 +9,7 @@
   let
     system = "x86_64-linux";
   in {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.Borys-Mch-Nix = nixpkgs.lib.nixosSystem {
       inherit system;
 
       modules = [
