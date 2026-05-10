@@ -14,11 +14,21 @@
     plymouth = {
       enable = true;
       theme = "black_hud";
+      themePackages = with pkgs; [
+        # By default we would install all themes
+        (adi1090x-plymouth-themes.override {
+          selected_themes = [ "black_hud" ];
+        })
+      ];
     };
 
     # Enable "Silent boot"
     consoleLogLevel = 3;
-    initrd.verbose = false;
+    initrd = {
+      verbose = false;
+      systemd.enable = true;
+    };
+    
     kernelPackages = pkgs.linuxPackages_latest;
     kernelParams = [
       "quiet"
