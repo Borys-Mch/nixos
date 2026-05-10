@@ -35,7 +35,10 @@
     gedit
 
     # GNOME tweaks
-    gnome-tweaks
+    # gnome-tweaks
+
+    # Tweaking tool for the COSMIC Desktop Environment
+    cosmic-ext-tweaks
 
     # Dev
     vscode
