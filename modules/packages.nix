@@ -80,8 +80,6 @@
     #Система
     asusctl
     nautilus
-    plymouth
-    adi1090x-plymouth-themes
   ];
 
   environment.cosmic.excludePackages = with pkgs; [
