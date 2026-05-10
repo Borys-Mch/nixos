@@ -32,6 +32,7 @@
     onlyoffice-desktopeditors
     foliate
     epsonscan2
+    gedit
 
     # GNOME tweaks
     gnome-tweaks
@@ -75,6 +76,11 @@
 
     #Система
     asusctl
+    nautilus
+    dolphin
+    doublecmd
+    krusader
+    gnome-commander
   ];
 
   # Install firefox.
