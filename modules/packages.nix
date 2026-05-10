@@ -79,7 +79,11 @@
 
   # Install firefox.
   programs.firefox.enable = true;
-
+  programs.firefox.preferences = {
+    # disable libadwaita theming for Firefox
+    "widget.gtk.libadwaita-colors.enabled" = false;
+  };
+  
   # Віртуалізація
   virtualisation.libvirtd.enable = true;
 

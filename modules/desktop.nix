@@ -5,7 +5,13 @@
   services.xserver.enable = true;
 
   # Enable the GNOME Desktop Environment.
-  services.desktopManager.gnome.enable = true;
+  # services.desktopManager.gnome.enable = true;
+
+  # Enable the COSMIC login manager
+  services.displayManager.cosmic-greeter.enable = true;
+  # Enable the COSMIC desktop environment
+  services.desktopManager.cosmic.enable = true;
+
   services.displayManager.gdm.enable = true;
   services.displayManager.gdm.wayland = true;
 
@@ -38,4 +44,6 @@
     NIXOS_OZONE_WL = "1";
     GBM_BACKEND = "nvidia-drm";
   };
+
+  services.system76-scheduler.enable = true;
 }
