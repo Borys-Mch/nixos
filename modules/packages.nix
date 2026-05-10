@@ -77,7 +77,7 @@
     #Система
     asusctl
     nautilus
-    dolphin
+    kdePackages.dolphin
     doublecmd
     krusader
     gnome-commander
