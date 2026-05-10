@@ -3,17 +3,24 @@
 {
   # Bootloader.
   boot = {
-
-    plymouth = {
-      enable = true;
-      theme = "black_hud";
-      themePackages = with pkgs; [
-        # By default we would install all themes
-        (adi1090x-plymouth-themes.override {
-          selected_themes = [ "black_hud" ];
-        })
-      ];
+    
+    loader = {
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+      systemd-boot.configurationLimit = 10;
+      timeout = 1;
     };
+
+    #plymouth = {
+    #  enable = true;
+    #  theme = "black_hud";
+    #  themePackages = with pkgs; [
+    #    # By default we would install all themes
+    #    (adi1090x-plymouth-themes.override {
+    #      selected_themes = [ "black_hud" ];
+    #    })
+    #  ];
+    #};
 
     # Enable "Silent boot"
     #consoleLogLevel = 3;
@@ -25,13 +32,6 @@
     #  "systemd.show_status=auto"
       "nvidia-drm.modeset=1"
     ];
-    
-    loader = {
-      systemd-boot.enable = true;
-      efi.canTouchEfiVariables = true;
-      systemd-boot.configurationLimit = 10;
-      timeout = 1;
-    };
 
   };
 
