@@ -16,13 +16,13 @@
     };
 
     # Enable "Silent boot"
-    consoleLogLevel = 3;
-    initrd.verbose = false;
+    #consoleLogLevel = 3;
+    #initrd.verbose = false;
     kernelPackages = pkgs.linuxPackages_latest;
     kernelParams = [
-      "quiet"
-      "udev.log_level=3"
-      "systemd.show_status=auto"
+    #  "quiet"
+    #  "udev.log_level=3"
+    #  "systemd.show_status=auto"
       "nvidia-drm.modeset=1"
     ];
     
@@ -43,7 +43,7 @@
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
-  networking.networkmanager.enable = false;
+  networking.networkmanager.enable = true;
 
   # Set your time zone.
   time.timeZone = "Europe/Kyiv";
