@@ -31,7 +31,7 @@
       efi.canTouchEfiVariables = true;
       systemd-boot.configurationLimit = 10;
       timeout = 1;
-    }
+    };
 
   };
 
