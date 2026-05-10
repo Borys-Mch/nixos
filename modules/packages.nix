@@ -77,10 +77,11 @@
     #Система
     asusctl
     nautilus
-    kdePackages.dolphin
-    doublecmd
-    krusader
-    gnome-commander
+  ];
+
+  environment.cosmic.excludePackages = with pkgs; [
+    cosmic-edit
+    cosmic-files
   ];
 
   # Install firefox.
