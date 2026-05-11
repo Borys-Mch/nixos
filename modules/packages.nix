@@ -35,10 +35,8 @@
     gedit
 
     # GNOME tweaks
-    # gnome-tweaks
+    gnome-tweaks
 
-    # Tweaking tool for the COSMIC Desktop Environment
-    cosmic-ext-tweaks
 
     # Dev
     vscode
@@ -79,20 +77,10 @@
 
     #Система
     asusctl
-    nautilus
-  ];
-
-  environment.cosmic.excludePackages = with pkgs; [
-    cosmic-edit
-    cosmic-files
   ];
 
   # Install firefox.
   programs.firefox.enable = true;
-  programs.firefox.preferences = {
-    # disable libadwaita theming for Firefox
-    "widget.gtk.libadwaita-colors.enabled" = false;
-  };
   
   # Віртуалізація
   virtualisation.libvirtd.enable = true;
