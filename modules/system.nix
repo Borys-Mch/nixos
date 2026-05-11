@@ -10,9 +10,22 @@
       systemd-boot.configurationLimit = 10;
       timeout = 1;
     };
+
+    plymouth = {
+      enable = true;
+      theme = "rings";
+      themePackages = with pkgs; [
+        # By default we would install all themes
+        (adi1090x-plymouth-themes.override {
+          selected_themes = [ "rings" ];
+        })
+      ];
+    };
     
     kernelPackages = pkgs.linuxPackages_latest;
     kernelParams = [
+      "quiet"
+      "udev.log_level=3"
       "nvidia-drm.modeset=1"
     ];
 

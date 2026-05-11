@@ -77,6 +77,8 @@
 
     #Система
     asusctl
+    plymouth
+    adi1090x-plymouth-themes
   ];
 
   # Install firefox.
