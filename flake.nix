@@ -9,16 +9,16 @@
     };
   };
 
-  specialArgs = {
-    inherit inputs;
-  };
-  
   outputs = { self, nixpkgs, ... }:
   let
     system = "x86_64-linux";
   in {
     nixosConfigurations.Borys-Mch-Nix = nixpkgs.lib.nixosSystem {
       inherit system;
+
+      specialArgs = {
+        inherit inputs;
+      };
 
       modules = [
         ./configuration.nix
