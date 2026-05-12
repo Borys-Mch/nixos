@@ -9,6 +9,10 @@
     };
   };
 
+  specialArgs = {
+    inherit inputs;
+  };
+  
   outputs = { self, nixpkgs, ... }:
   let
     system = "x86_64-linux";
