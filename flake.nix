@@ -9,7 +9,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, ... }:
+  outputs = { self, nixpkgs, zen-browser, ... }:
   let
     system = "x86_64-linux";
   in {
