@@ -11,6 +11,8 @@
     gtk3
     vte
     libhandy
+    glib
+    gobject-introspection
   ];
 
   # --------- ZSH ---------
