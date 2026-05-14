@@ -79,6 +79,9 @@
     bambu-studio
 
     #Система
+    zsh
+    zsh-autosuggestions
+    zsh-syntax-highlighting
     asusctl
     plymouth
     adi1090x-plymouth-themes
