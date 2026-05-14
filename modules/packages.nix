@@ -103,8 +103,6 @@
     adi1090x-plymouth-themes
   ];
 
-  programs.dconf.enable = true;
-
   dconf.settings = {
     "org/gnome/shell" = {
       enabled-extensions = [
@@ -117,6 +115,10 @@
         "Vitals@CoreCoding.com"
       ];
     };
+  };
+
+  environment.sessionVariables = {
+    GI_TYPELIB_PATH = "${pkgs.gtk3}/lib/girepository-1.0:${pkgs.vte}/lib/girepository-1.0:${pkgs.libhandy}/lib/girepository-1.0";
   };
 
   programs.zsh.enable = true;
@@ -146,9 +148,5 @@
     enable = true;
     nssmdns4 = true;
     openFirewall = true;
-  };
-
-  environment.sessionVariables = {
-    GI_TYPELIB_PATH = "${pkgs.gtk3}/lib/girepository-1.0:${pkgs.vte}/lib/girepository-1.0:${pkgs.libhandy}/lib/girepository-1.0";
   };
 }
