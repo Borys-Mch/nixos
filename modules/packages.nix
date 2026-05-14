@@ -102,6 +102,8 @@
     plymouth
     adi1090x-plymouth-themes
   ];
+  
+  programs.dconf.enable = true;
 
   dconf.settings = {
     "org/gnome/shell" = {
@@ -137,7 +139,6 @@
   programs.appimage.enable = true;
   programs.appimage.binfmt = true;
   programs.git.enable = true;
-  programs.dconf.enable = true;
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
