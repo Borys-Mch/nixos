@@ -122,4 +122,8 @@
     nssmdns4 = true;
     openFirewall = true;
   };
+
+  environment.sessionVariables = {
+    GI_TYPELIB_PATH = "${pkgs.gtk3}/lib/girepository-1.0:${pkgs.vte}/lib/girepository-1.0:${pkgs.libhandy}/lib/girepository-1.0";
+  };
 }
