@@ -104,4 +104,10 @@
   programs.nix-ld.libraries = with pkgs; [
     stdenv.cc.cc
   ];
+
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
 }
