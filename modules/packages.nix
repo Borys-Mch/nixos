@@ -87,6 +87,8 @@
     adi1090x-plymouth-themes
   ];
 
+  programs.zsh.enable = true;
+
   # Install firefox.
   programs.firefox.enable = true;
   
