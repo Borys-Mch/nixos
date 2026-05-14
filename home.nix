@@ -4,7 +4,7 @@
   home.username = "borysmch";
   home.homeDirectory = "/home/borysmch";
 
-  home.stateVersion = "unstable";
+  home.stateVersion = "26.05";
 
   # --------- ZSH ---------
   programs.zsh = {
