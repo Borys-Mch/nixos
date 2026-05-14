@@ -8,6 +8,9 @@
 
   home.packages = with pkgs; [
     gjs
+    gtk3
+    vte
+    libhandy
   ];
 
   # --------- ZSH ---------
