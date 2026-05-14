@@ -20,7 +20,7 @@
     gnomeExtensions.bluetooth-battery-meter
     gnomeExtensions.dash-to-dock
     gnomeExtensions.ddterm
-    gnomeExtensions.quick-settings-tweaks
+    gnomeExtensions.quick-settings-tweaker
     gnomeExtensions.user-themes
     gnomeExtensions.vitals
 
@@ -104,20 +104,6 @@
   ];
   
   programs.dconf.enable = true;
-
-  dconf.settings = {
-    "org/gnome/shell" = {
-      enabled-extensions = [
-        "appindicatorsupport@rgcjonas.gmail.com"
-        "bluetooth-battery-meter@maniacx.github.com"
-        "dash-to-dock@micxgx.gmail.com"
-        "ddterm@amezin.github.com"
-        "quick-settings-tweaks@qwreey"
-        "user-theme@gnome-shell-extensions.gcampax.github.com"
-        "Vitals@CoreCoding.com"
-      ];
-    };
-  };
 
   environment.sessionVariables = {
     GI_TYPELIB_PATH = "${pkgs.gtk3}/lib/girepository-1.0:${pkgs.vte}/lib/girepository-1.0:${pkgs.libhandy}/lib/girepository-1.0";
