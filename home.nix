@@ -6,15 +6,6 @@
 
   home.stateVersion = "26.05";
 
-  home.packages = with pkgs; [
-    gjs
-    gtk3
-    vte
-    libhandy
-    glib
-    gobject-introspection
-  ];
-
   # --------- ZSH ---------
   programs.zsh = {
     enable = true;

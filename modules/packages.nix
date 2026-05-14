@@ -15,6 +15,12 @@
     epson-escpr
     epson-escpr2
 
+    # GNOME extensions additional
+    gjs
+    gtk3
+    vte
+    libhandy
+
     # Internet
     brave
     vivaldi
