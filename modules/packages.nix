@@ -82,6 +82,7 @@
     zsh
     zsh-autosuggestions
     zsh-syntax-highlighting
+    starship
     asusctl
     plymouth
     adi1090x-plymouth-themes
