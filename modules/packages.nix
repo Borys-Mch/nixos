@@ -12,6 +12,8 @@
     appimage-run
     mesa-demos
     vulkan-tools
+    epson-escpr
+    epson-escpr2
 
     # Internet
     brave
