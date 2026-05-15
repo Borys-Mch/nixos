@@ -16,7 +16,10 @@ let
         inherit hash;
       };
 
-      nativeBuildInputs = [ pkgs.unzip ];
+      nativeBuildInputs = [
+        pkgs.glib
+        pkgs.unzip
+      ];
       dontUnpack = true;
 
       installPhase = ''
@@ -24,6 +27,9 @@ let
 
         install -d "$out/share/gnome-shell/extensions/${uuid}"
         unzip -q "$src" -d "$out/share/gnome-shell/extensions/${uuid}"
+        if [ -d "$out/share/gnome-shell/extensions/${uuid}/schemas" ]; then
+          glib-compile-schemas "$out/share/gnome-shell/extensions/${uuid}/schemas"
+        fi
 
         runHook postInstall
       '';
