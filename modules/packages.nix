@@ -1,5 +1,22 @@
 { inputs, config, pkgs, ... }:
 
+let
+  dashToDockBottomPanelRadius = "9px";
+
+  dashToDockPatched = pkgs.gnomeExtensions.dash-to-dock.overrideAttrs (old: {
+    postPatch = (old.postPatch or "") + ''
+      cat >> stylesheet.css <<'EOF'
+
+      #dashtodockContainer.bottom #dash .dash-background,
+      #dashtodockContainer.bottom.shrink #dash .dash-background,
+      #dashtodockContainer.bottom.straight-corner #dash .dash-background,
+      #dashtodockContainer.bottom.shrink.straight-corner #dash .dash-background {
+        border-radius: ${dashToDockBottomPanelRadius};
+      }
+      EOF
+    '';
+  });
+in
 {
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -18,7 +35,7 @@
     # GNOME extensions
     gnomeExtensions.appindicator
     gnomeExtensions.bluetooth-battery-meter
-    gnomeExtensions.dash-to-dock
+    dashToDockPatched
     gnomeExtensions.ddterm
     gnomeExtensions.quick-settings-tweaker
     gnomeExtensions.user-themes
