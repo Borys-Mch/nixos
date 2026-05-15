@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   # Enable the X11 windowing system.
@@ -6,6 +6,30 @@
 
   # Enable the GNOME Desktop Environment.
   services.desktopManager.gnome.enable = true;
+
+  programs.dconf = {
+    enable = true;
+    profiles.user.databases = [
+      {
+        lockAll = true;
+        settings = {
+          "org/gnome/shell" = {
+            disable-user-extensions = false;
+            disabled-extensions = lib.gvariant.mkEmptyArray lib.gvariant.type.string;
+            enabled-extensions = [
+              "appindicatorsupport@rgcjonas.gmail.com"
+              "bluetooth-battery-meter@maniacx.github.com"
+              "dash-to-dock@micxgx.gmail.com"
+              "ddterm@amezin.github.com"
+              "quick-settings-tweaks@qwreey"
+              "user-theme@gnome-shell-extensions.gcampax.github.com"
+              "Vitals@CoreCoding.com"
+            ];
+          };
+        };
+      }
+    ];
+  };
 
   services.displayManager.gdm.enable = true;
   services.displayManager.gdm.wayland = true;
