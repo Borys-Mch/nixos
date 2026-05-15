@@ -11,7 +11,6 @@
     enable = true;
     profiles.user.databases = [
       {
-        lockAll = true;
         settings = {
           "org/gnome/shell" = {
             disable-user-extensions = false;
@@ -19,10 +18,14 @@
             enabled-extensions = [
               "appindicatorsupport@rgcjonas.gmail.com"
               "bluetooth-battery-meter@maniacx.github.com"
+              "BringOutSubmenuOfPowerOffLogoutButton@pratap.fastmail.fm"
               "dash-to-dock@micxgx.gmail.com"
               "ddterm@amezin.github.com"
+              "easy_docker_containers@red.software.systems"
               "quick-settings-tweaks@qwreey"
+              "top-bar-organizer@julian.gse.jsts.xyz"
               "user-theme@gnome-shell-extensions.gcampax.github.com"
+              "vertical-workspaces@G-dH.github.com"
               "Vitals@CoreCoding.com"
             ];
           };
