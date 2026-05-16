@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       ./modules/system.nix
       ./modules/desktop.nix
+      ./modules/filesystems.nix
       ./modules/gnome-extensions.nix
       ./modules/nvidia.nix
       ./modules/docker.nix
