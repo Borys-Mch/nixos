@@ -15,6 +15,7 @@
     vulkan-tools
     epson-escpr
     epson-escpr2
+    picocom
 
     # Internet
     brave
