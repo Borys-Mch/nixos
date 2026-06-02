@@ -66,7 +66,7 @@
     audacity
 
     # Паролі
-    bitwarden-desktop
+    bitwarden-cli
 
     # Графіка
     gimp
