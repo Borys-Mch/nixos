@@ -27,10 +27,12 @@
       "quiet"
       "udev.log_level=3"
       "nvidia-drm.modeset=1"
+      "pcie_aspm=off"
     ];
 
     extraModprobeConfig = ''
       options iwlwifi power_save=0
+      options iwlwifi disable_11ax=1
       options iwlmvm power_scheme=1
     '';
 
