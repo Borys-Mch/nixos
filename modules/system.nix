@@ -29,6 +29,10 @@
       "nvidia-drm.modeset=1"
     ];
 
+    extraModprobeConfig = ''
+      options iwlmvm power_scheme=1
+    '';
+
   };
 
   networking.hostName = "Borys-Mch-Nix"; # Define your hostname.
