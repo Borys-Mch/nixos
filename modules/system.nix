@@ -30,6 +30,7 @@
     ];
 
     extraModprobeConfig = ''
+      options iwlwifi power_save=0
       options iwlmvm power_scheme=1
     '';
 
@@ -44,6 +45,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+  networking.networkmanager.wifi.powersave = false;
 
   # Set your time zone.
   time.timeZone = "Europe/Kyiv";
