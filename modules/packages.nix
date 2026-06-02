@@ -78,7 +78,6 @@
     # 3D / slicer
     orca-slicer
     lycheeslicer
-    bambu-studio
 
     #Система
     zsh
