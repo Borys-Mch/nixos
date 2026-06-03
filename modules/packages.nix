@@ -65,9 +65,6 @@
     audacious
     audacity
 
-    # Паролі
-    bitwarden-cli
-
     # Графіка
     gimp
     blender
