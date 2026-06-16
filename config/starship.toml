@@ -33,6 +33,7 @@ text_muted = '#a0a9cb'
 separator = '#a3aed2'
 
 [os]
+symbol = "󱄅"
 format = "[ $symbol ]($style)"
 style = "bg:arch_blue fg:text_light"
 disabled = false
