@@ -16,6 +16,7 @@
     epson-escpr
     epson-escpr2
     picocom
+    nerd-fonts.jetbrains-mono
 
     # Internet
     brave
