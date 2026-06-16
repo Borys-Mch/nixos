@@ -38,7 +38,7 @@ style = "bg:arch_blue fg:text_light"
 disabled = false
 
 [os.symbols]
-nixos = "󱄅"
+NixOS = "󱄅"
 Windows = "󰍲"
 Ubuntu = "󰕈"
 SUSE = ""
