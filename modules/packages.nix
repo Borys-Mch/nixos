@@ -57,6 +57,7 @@
     postman
     esphome
     winboat
+    bruno
 
     # Медіа
     smplayer
