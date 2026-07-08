@@ -59,6 +59,9 @@
     winboat
     bruno
 
+    # Android (adb + fastboot)
+    android-tools
+
     # Медіа
     smplayer
     vlc
