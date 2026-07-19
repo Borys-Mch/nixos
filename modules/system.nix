@@ -74,7 +74,17 @@
     LC_TIME = "uk_UA.UTF-8";
   };
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 14d";
+  };
+
+  nix.settings = {
+    experimental-features = [ "nix-command" "flakes" ];
+    extra-sandbox-paths = [ "/etc/resolv.conf" ];
+    auto-optimise-store = true;
+  };
   
   system.stateVersion = "25.11";
 }
