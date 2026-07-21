@@ -80,7 +80,6 @@
     # 3D / slicer
     orca-slicer
     lycheeslicer
-    freecad
 
     #Система
     zsh
