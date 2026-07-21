@@ -57,7 +57,6 @@
     rpi-imager
     postman
     esphome
-    winboat
     bruno
 
     # Android (adb + fastboot)
@@ -80,6 +79,7 @@
     # 3D / slicer
     orca-slicer
     lycheeslicer
+    freecad
 
     #Система
     zsh
