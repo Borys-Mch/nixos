@@ -74,13 +74,13 @@
     # Графіка
     gimp
     blender
-    krita
     figma-linux
     inkscape
 
     # 3D / slicer
     orca-slicer
     lycheeslicer
+    freecad
 
     #Система
     zsh
