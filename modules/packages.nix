@@ -119,6 +119,9 @@
     stdenv.cc.cc
   ];
 
+  programs.adb.enable = true;
+  services.udev.packages = [ pkgs.android-udev-rules ];
+
   services.avahi = {
     enable = true;
     nssmdns4 = true;
