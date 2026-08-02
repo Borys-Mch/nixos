@@ -18,7 +18,6 @@
     picocom
     nerd-fonts.jetbrains-mono
     meshtastic
-    winboat
 
     # Internet
     brave
