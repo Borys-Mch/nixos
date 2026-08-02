@@ -51,7 +51,7 @@
     git
     termius
     insomnia
-    jetbrains.pycharm-oss
+    jetbrains.pycharm
     arduino-ide
     mongodb-compass
     rpi-imager
