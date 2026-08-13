@@ -109,6 +109,7 @@
   programs.virt-manager.enable = true;
 
   services.asusd.enable = true;
+  services.tailscale.enable = true;
 
   programs.appimage.enable = true;
   programs.appimage.binfmt = true;
