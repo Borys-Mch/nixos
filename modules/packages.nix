@@ -53,7 +53,16 @@
     insomnia
     jetbrains.pycharm
     arduino-ide
-    mongodb-compass
+    (mongodb-compass.overrideAttrs (old: {
+      # Fix for nixos-26.05 wrapGAppsHook3: the package calls wrapGAppsHook
+      # manually inside buildCommand, where $output is unset (it's only set
+      # in fixupPhase). This causes "bad array subscript". Set output/outputBin
+      # explicitly before the call.
+      buildCommand = builtins.replaceStrings
+        [ "wrapGAppsHook $out/bin/mongodb-compass" ]
+        [ "output=out\n  outputBin=out\n  wrapGAppsHook $out/bin/mongodb-compass" ]
+        old.buildCommand;
+    }))
     rpi-imager
     postman
     esphome
