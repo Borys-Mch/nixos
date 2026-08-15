@@ -36,6 +36,7 @@
     discord
 
     # Офіс
+    libreoffice
     onlyoffice-desktopeditors
     foliate
     epsonscan2
