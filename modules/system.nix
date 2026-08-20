@@ -22,7 +22,9 @@
       ];
     };
     
-    kernelPackages = pkgs.linuxPackages_latest;
+    # Pinned to 7.1 because NVIDIA 595.71.05 fails to build on Linux 7.2
+    # (missing <string.h> include in nvidia/os-interface.c).
+    kernelPackages = pkgs.linuxPackages_7_1;
     kernelParams = [
       "quiet"
       "udev.log_level=3"
