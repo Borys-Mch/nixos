@@ -89,6 +89,7 @@
     # 3D / slicer
     orca-slicer
     lycheeslicer
+    cura-appimage
     freecad
 
     #Система
